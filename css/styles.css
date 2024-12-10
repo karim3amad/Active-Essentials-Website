@@ -1,0 +1,556 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #333333;
+    padding: 0;
+    margin: 0;
+    background-color: #242424;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+    transition: transform 0.3s ease;
+}
+
+.wrapper {
+    margin-left: 0px;
+}
+
+
+#nav_section {
+    position: fixed;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0); /* Fully transparent */
+    transition: background-color 0.3s ease; /* Smooth transition */
+    z-index: 1000; /* Ensure it stays above other elements */
+}
+
+#nav_section.scrolled {
+    background-color: #333; /* Semi-transparent black */
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5); /* Optional shadow */
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    text-decoration: none''
+}
+
+li.box{
+    float: right;
+    border-radius: 10px;
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 14px 30px;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    font-family: sans-serif;
+}
+
+/* Change the link color to #111 (black) on hover */
+li.box:hover {
+    background-color: darkred;
+}
+
+#nav_name {
+    margin-left: 20px;
+    margin-top: 6px;
+    padding: 0px;
+    display: block;
+   
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    font-size: 23px;
+}
+
+#nav_name a {
+    text-decoration: none;
+}
+
+.gym_banner {
+    width: 100%;
+    height: 600px;
+    margin-bottom: 30px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)), url(../img/gympic.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-color: rgba(0, 0, 0, 0.3); /* Black tint */
+    background-blend-mode: multiply; /* Blend the tint with the image */
+}
+
+h1 {
+    padding-top: 180px;
+    font-size: 70px;
+    margin-left: 70px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 80px;
+}
+
+h3 {
+    margin-top: -30;
+    font-size: 70px;
+    margin-left: 70px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 30px;
+}
+
+.red_color_text {
+    color: darkred;
+}
+/*END OF TOP SECTION*/
+
+
+
+
+
+
+
+h2 {
+    color: white;
+    font-size: 60px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+.about_word {
+    display: inline-block;
+    color: white; 
+    border-bottom: 4px solid darkred; 
+    padding-bottom: 0px;  
+}
+
+
+
+.red {
+    color: darkred;
+}
+
+.white {
+    color: white;
+}
+
+.about {
+    height: 1000px;
+}
+
+.about_content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.text {
+    width: 600px;
+    font-size: 16px;
+    color: white;
+    font-family: sans-serif;
+    align-items: center;
+    line-height: 1.4;
+}
+
+.images {
+    margin-top: 50px;
+/*    border: 3px solid white;*/
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+
+.team-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.underlined_words{
+    display: inline-block;
+    border-bottom: 4px solid darkred;
+}
+
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 30px; /* Spacing between team members */
+    flex-wrap: wrap; /* Ensure responsive layout */
+}
+
+.team-member {
+    background-color: aliceblue; /* Solid white background */
+    border: 2px solid darkred;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.team-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular photo */
+    margin-bottom: 15px;
+    border: 3px solid darkred;
+}
+
+.team-member h3 {
+    color: darkred;
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.position {
+    font-weight: bold;
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.bio {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Animations on Scroll */
+.team-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 2s ease, transform 2s ease;
+}
+
+.team-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-member:hover {
+    transform: translateY(-22px); /* Slight lift on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8); /* Stronger shadow on hover */
+}
+
+
+
+
+
+
+
+
+
+/* Product Section */
+.product-section {
+    text-align: center;
+    padding: 10px 20px 70px 20px;
+    background-color: #f8f9fa;
+    margin-top: 200px;
+}
+
+/* Product Cards Layout */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Responsive grid */
+    gap: 30px; /* Space between cards */
+    padding: 0 20px;
+}
+
+/* Individual Product Card */
+.product-card {
+    
+    display: flex;
+    flex-direction: column;
+    background-color: lightgray;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 3px solid darkred;
+}
+
+.product-card:hover {
+    transform: translateY(-15px); 
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Product Image */
+.product-image-container {
+    background: #f3f3f3; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px; 
+}
+
+.product-image {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    object-fit: cover;
+}
+
+/* Product Information */
+.product-info {
+    padding: 20px;
+    text-align: left; 
+}
+
+.product-info h3 {
+    font-size: 1.4rem;
+    margin: 0 0 10px;
+    color: #333333;
+}
+
+.product-code {
+    font-size: 0.9rem;
+    color: #888888; 
+    margin-bottom: 15px;
+}
+
+.product-description {
+    font-size: 0.85rem;
+    color: #555555;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* Add to Cart Button */
+.add-to-cart {
+    display: inline-block;
+    background-color: #800000;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+.add-to-cart:hover {
+    background-color: #a00000; /* Slightly lighter on hover */
+}
+
+
+
+
+
+/*Contact Section*/
+.contact-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #242424;
+    background-image: url("https://www.transparenttextures.com/patterns/concrete-wall-2.png");
+}
+
+.contact-form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    color: white;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-style: normal; 
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: #800000;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 5px;
+    display: none;
+}
+
+input.valid, textarea.valid {
+    border-color: green;
+}
+
+input.invalid, textarea.invalid {
+    border-color: red;
+}
+
+.send-button {
+    background-color: #800000;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.send-button:hover {
+    background-color: #a00000;
+}
+
+
+/*References Section*/
+/* References Section */
+/* References Section */
+#references {
+    padding: 50px 20px;
+    background-color: white; /* White background for contrast */
+    color: #333; /* Dark gray text for readability */
+    border-top: 2px solid #800000; /* Red border for separation */
+    text-align: center; /* Align all content to the left */
+    font-family: Arial, sans-serif;
+}
+
+#references h2 {
+    font-size: 60px;
+    color: #800000; /* Dark red heading for emphasis */
+    margin-bottom: 20px;
+    border-bottom: 3px solid #800000; /* Optional underline for emphasis */
+    padding-bottom: 5px;
+}
+
+.references-list {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    max-width: 700px; /* Limit width for readability */
+    margin: 0 auto; /* Center the list within the white section */
+    font-size: 1rem;
+    line-height: 1.8;
+    text-align: center;
+}
+
+.references-list li {
+    margin-bottom: 15px;
+}
+
+.references-list a {
+    color: #800000; /* Red links for consistency */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Bold links for emphasis */
+    transition: color 0.3s ease; /* Smooth hover effect */
+}
+
+.references-list a:hover {
+    color: #a00000; /* Slightly darker red on hover */
+}
+
+
+
+
+
+
+
+/*Back to top button*/
+.back-to-top {
+    position: fixed; /* Keeps the button in a fixed position on the screen */
+    bottom: 20px; /* Distance from the bottom */
+    left: 20px; /* Distance from the right */
+    background-color: #800000; /* Dark red background */
+    color: white; /* White text */
+    border: none; /* No border */
+    border-radius: 50%; /* Circular button */
+    width: 50px; /* Button size */
+    height: 50px; /* Button size */
+    font-size: 16px; /* Font size for text or icon */
+    text-align: center; /* Center-align the text */
+    line-height: 50px; /* Vertically align text in the button */
+    text-decoration: none; /* Remove underline */
+    cursor: pointer; /* Pointer cursor on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    z-index: 1000; /* Keep it above other elements */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    font-family: "Oswald", sans-serif;
+    font-weight: 600;
+    font-style: normal; 
+}
+
+.back-to-top:hover {
+    background-color: #a00000; /* Slightly lighter red on hover */
+    transform: scale(1.1); /* Slight enlargement on hover */
+}
+
+
+/* Modal Background */
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 1000;
+}
+
+/* Modal Content */
+.popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #222; /* Dark gray to match website aesthetic */
+    color: white; /* White text for contrast */
+    padding: 15px 20px; /* Compact padding */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    text-align: center;
+    max-width: 300px; /* Limit width for compactness */
+    width: auto; /* Automatically adjust width to fit the content */
+    font-family: Arial, sans-serif; /* Simple and clean font */
+    font-size: 1rem; /* Balanced font size */
+}
+
+/* Close Button */
+.close-button {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white; /* Matches text */
+    cursor: pointer;
+}
+
+/* Message Styling */
+.popup-content h2 {
+    margin: 0 0 10px;
+    font-size: 1.2rem; /* Slightly larger for the heading */
+    color: darkred; /* Dark red for emphasis */
+}
+
+.popup-content p {
+    margin: 0;
+    font-size: 0.9rem;
+    line-height: 1.4;
+    color: #f1f1f1; /* Lighter gray for text */
+}
+
+
+
+
